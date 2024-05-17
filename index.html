@@ -15,43 +15,44 @@
 
 <body>
     <header>
-        <div class="container">
-            <div class="logo">PrecisEight</div>
-            <nav>
+        <nav>
+            <div class="container">
+                <div class="logo">PrecisEight</div>
+
                 <ul>
-                    <li><a class="active" href="#">Home</a></li>
-                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="#cover">Home</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
                     <li><a href="#">Team</a></li>
                     <li><a href="#">Kontak</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
-    <section class="cover">
-        <div class="container">
+    <section class="cover" id="cover">
+        <div class="container-cover">
             <h1>Welcome!</h1>
             <p>at PrecisEight Company Website</p>
             <a href="#content" class="btn">Mulai</a>
         </div>
     </section>
     <section>
-        <div class="container-card">
+        <div class="container-card" id="dashboard">
             <div class="card">
-                <h2>Total Transaksi</h2>
+                <h2>Transactions Total</h2>
                 <p id="total"></p>
             </div>
             <div class="card">
-                <h2>Card 2</h2>
-                <p>Ini adalah card kedua.</p>
+                <h2>Sold Items</h2>
+                <p id="quantity"></p>
             </div>
             <div class="card">
-                <h2>Card 3</h2>
-                <p>Ini adalah card ketiga.</p>
+                <h2>Costs Total</h2>
+                <p id="cost"></p>
             </div>
             <div class="card">
-                <h2>Card 4</h2>
-                <p>Ini adalah card keempat.</p>
+                <h2>Revenues Total</h2>
+                <p id="revenue"></p>
             </div>
         </div>
     </section>
@@ -89,7 +90,7 @@
             <p>Hak Cipta PrecisEight Comapany © 2024. Semua Hak Dilindungi Undang-Undang.</p>
         </div>
     </footer>
-    <script src="datajson.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
