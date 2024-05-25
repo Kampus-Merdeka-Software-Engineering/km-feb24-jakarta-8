@@ -1,6 +1,8 @@
-*{
+* {
     font-family: "DM Serif Display", serif;
+    scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
 }
@@ -12,7 +14,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 header {
@@ -27,11 +28,15 @@ header {
 }
 
 .logo {
-    float: right;
     font-family: "Kanit", sans-serif;
     font-weight: 800;
-    font-style: normal;
     font-size: 30px;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 nav ul {
@@ -52,19 +57,27 @@ nav ul li a {
 }
 
 .cover {
-    background-image: url('/assets/heksa-cover.jpg');
+    background-image: url('./assets/heksa-cover.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 325px 0;
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 0 20px;
 }
 
 .cover h1 {
     margin: 0;
+    font-size: 3em;
 }
 
 .cover p {
-    color: #777;
+    color: #ccc;
+    font-size: 1.5em;
 }
 
 .btn {
@@ -74,6 +87,7 @@ nav ul li a {
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 20px;
 }
 
 footer {
@@ -82,30 +96,32 @@ footer {
     padding: 20px 0;
     text-align: center;
 }
-.content{
-    margin: 20px auto 0px auto;
+
+.content {
+    margin: 20px auto 0;
     width: 95%;
     max-width: 1200px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
-.active{
+
+.active {
     color: grey;
 }
+
 .container-card {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 50px;
 }
 
 .card {
-    width: calc(25% - 20px);
+    width: calc(20% - 20px);
     background-color: #f2f2f2;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .card h2 {
@@ -115,23 +131,108 @@ footer {
 .card p {
     margin-bottom: 0;
 }
+
 .container-graph {
     display: flex;
-    height: 100vh;
+    height: auto;
     margin: 50px;
     margin-top: 0;
 }
 
 .graph-content {
-    width: 75%;
+    width: 75%; /* Ensure main content takes 75% width */
     background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    width: 25%; /* Ensure sidebar takes 25% width */
+    background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
 }
 
-.sidebar {
-    width: 25%;
-    background-color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .cover {
+        padding: 200px 0;
+    }
+
+    .container-card {
+        padding: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .container-graph {
+        flex-direction: column;
+    }
+
+    .graph-content, .sidebar {
+        width: 100%; /* Stack main content and sidebar */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .cover {
+        padding: 150px 0;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .container-card {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .container-graph {
+        margin: 20px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
 }

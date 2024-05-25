@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -18,8 +19,10 @@
         <nav>
             <div class="container">
                 <div class="logo">PrecisEight</div>
-
-                <ul>
+                <div class="burger-menu" id="burger-menu">
+                    &#9776;
+                </div>
+                <ul id="nav-links">
                     <li><a href="#cover">Home</a></li>
                     <li><a href="#dashboard">Dashboard</a></li>
                     <li><a href="#">Team</a></li>
@@ -54,13 +57,19 @@
                 <h2>Revenues Total</h2>
                 <p id="revenue"></p>
             </div>
+            <div class="card">
+                <h2>Profit</h2>
+                <p id="profit"></p>
+            </div>
         </div>
     </section>
     <section>
         <div class="container-graph">
             <div class="graph-content">
-                <h2>Main Content</h2>
-                <p>Ini adalah konten utama.</p>
+                <h2>Graphic</h2>
+                <div class="profit-per-year">
+                    <p>Graphic progress of profit transaction</p>
+                </div>
             </div>
             <div class="sidebar">
                 <h2>Side content</h2>
