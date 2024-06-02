@@ -18,9 +18,9 @@
     <header>
         <nav>
             <div class="container">
-                <div class="logo">PrecisEight</div>
-                <div class="burger-menu" id="burger-menu">
-                    &#9776;
+                <div class="container-logo">
+                    <div class="logo">PrecisEight</div>
+                    <div class="burger-menu" id="burger-menu">&#9776;</div>
                 </div>
                 <ul id="nav-links">
                     <li><a href="#cover">Home</a></li>
@@ -34,7 +34,7 @@
 
     <section class="cover" id="cover">
         <div class="container-cover">
-            <h1>Welcome!</h1>
+            <h1 style="color: gray;">Welcome!</h1>
             <p>at PrecisEight Company Website</p>
             <a href="#content" class="btn">Mulai</a>
         </div>
@@ -64,16 +64,35 @@
         </div>
     </section>
     <section>
-        <div class="container-graph">
+        <div class="container-graph" style="background-color: white;">
             <div class="graph-content">
-                <h2>Graphic</h2>
+                <h3>Profit per Year</h3>
+                <label for="year-select">Select Year: </label>
+                <select id="year-select"></select>
                 <div class="profit-per-year">
-                    <p>Graphic progress of profit transaction</p>
+                </div>
+                <div>
+                    <h3>Customer by Country</h3>
+                    <div class="custBycountry">
+                        <canvas id="countryChart"></canvas>
+                    </div>
                 </div>
             </div>
             <div class="sidebar">
-                <h2>Side content</h2>
-                <p>Ini adalah side content.</p>
+                <div class="gender">
+                    <h2>Gender Distribution</h2>
+                    <div class="gender-distribution">
+                        <canvas id="genderChart"></canvas>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h2>Customer by Age</h2>
+                    <div class="age-distribution">
+                        <canvas id="ageChart"></canvas>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

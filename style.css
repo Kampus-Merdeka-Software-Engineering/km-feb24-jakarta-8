@@ -61,7 +61,7 @@ nav ul li a {
     background-size: cover;
     background-position: center;
     text-align: center;
-    height: 100vh; /* Full height of the viewport */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +140,7 @@ footer {
 }
 
 .graph-content {
-    width: 75%; /* Ensure main content takes 75% width */
+    width: 65%;
     background-color: #f2f2f2;
     padding: 20px;
     box-sizing: border-box;
@@ -148,26 +148,49 @@ footer {
 }
 
 .sidebar {
-    width: 25%; /* Ensure sidebar takes 25% width */
+    width: 35%;
     background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Media Queries for Responsiveness */
+
+.logo {
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: auto; /* Letakkan burger menu di ujung kanan */
+}
 
 @media (max-width: 768px) {
+    .container-logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     .container {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .logo {
-        margin-bottom: 20px;
+        margin-right: 0;
     }
 
     .burger-menu {
         display: block;
+        font-size: 30px;
+        cursor: pointer;
+        float: right;
     }
 
     nav ul {
@@ -203,11 +226,27 @@ footer {
     }
 
     .graph-content, .sidebar {
-        width: 100%; /* Stack main content and sidebar */
+        width: 100%;
     }
 }
 
 @media (max-width: 480px) {
+    .container-logo {
+        justify-content: flex-end; /* Letakkan logo dan burger menu di ujung kanan */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+    nav ul.show {
+        display: flex;
+    }
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
     .btn {
         padding: 8px 16px;
     }
@@ -236,3 +275,5 @@ footer {
         padding: 15px 0;
     }
 }
+
+
