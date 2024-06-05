@@ -144,7 +144,6 @@ footer {
     background-color: #f2f2f2;
     padding: 20px;
     box-sizing: border-box;
-    margin-bottom: 20px;
 }
 
 .sidebar {
@@ -176,6 +175,7 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
     .container {
         flex-direction: column;
@@ -223,6 +223,7 @@ footer {
 
     .container-graph {
         flex-direction: column;
+        gap: 20px;
     }
 
     .graph-content, .sidebar {
