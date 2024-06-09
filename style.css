@@ -3,15 +3,21 @@
     scroll-behavior: smooth;
 }
 
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
 }
 
-.team{
+.team {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .container {
     width: 80%;
     margin: 0 auto;
@@ -116,17 +122,20 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .card {
-    width: calc(20% - 20px);
+    width: calc(20% - 30px);
     background-color: #f2f2f2;
-    padding: 20px;
+    padding: 5px;
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    border-left: 10px solid #333;
 }
 
 .card h2 {
@@ -151,6 +160,20 @@ footer {
     box-sizing: border-box;
 }
 
+.container-table {
+    display: flex;
+    height: auto;
+    margin: 50px;
+    margin-top: 0;
+}
+
+.table-content {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .sidebar {
     width: 35%;
     background-color: #f2f2f2;
@@ -160,7 +183,6 @@ footer {
     flex-direction: column;
     align-items: center;
 }
-
 
 .logo {
     font-family: "Kanit", sans-serif;
@@ -172,8 +194,38 @@ footer {
     display: none;
     font-size: 30px;
     cursor: pointer;
-    margin-left: auto; /* Letakkan burger menu di ujung kanan */
+    margin-left: auto;
 }
+
+
+.data-table-container {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #f2f2f2;
+}
+
+.data-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.data-table tbody tr:hover {
+    background-color: #ddd;
+}
+
 
 @media (max-width: 768px) {
     .container-logo {
@@ -182,6 +234,7 @@ footer {
         align-items: center;
         width: 100%;
     }
+
     .container {
         flex-direction: column;
         align-items: flex-start;
@@ -238,7 +291,7 @@ footer {
 
 @media (max-width: 480px) {
     .container-logo {
-        justify-content: flex-end; /* Letakkan logo dan burger menu di ujung kanan */
+        justify-content: flex-end;
     }
 
     nav ul {
@@ -246,13 +299,16 @@ footer {
         width: 100%;
         display: none;
     }
+
     nav ul.show {
         display: flex;
     }
+
     nav ul li {
         margin-left: 0;
         margin-bottom: 10px;
     }
+
     .btn {
         padding: 8px 16px;
     }
@@ -315,7 +371,7 @@ h1 {
     color: #333;
 }
 
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 1200px) {
     .photos {
         grid-template-columns: repeat(4, 1fr);
@@ -365,4 +421,3 @@ h1 {
         grid-template-columns: 1fr;
     }
 }
-

@@ -25,8 +25,8 @@
                 <ul id="nav-links">
                     <li><a href="#cover">Home</a></li>
                     <li><a href="#dashboard">Dashboard</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </div>
         </nav>
@@ -34,9 +34,9 @@
 
     <section class="cover" id="cover">
         <div class="container-cover">
-            <h1 style="color: gray;">Welcome!</h1>
-            <p>at PrecisEight Company Website</p>
-            <a href="#content" class="btn">Mulai</a>
+            <h1 style="color: black;">Welcome!</h1>
+            <p style="color: gray;">at PrecisEight Company Website</p>
+            <a href="#dashboard" class="btn">Start</a>
         </div>
     </section>
     <h1 style="margin-left: 50px; margin-bottom: 0%;" id="dashboard">Dashboard</h1>
@@ -64,54 +64,50 @@
             </div>
         </div>
     </section>
+    <label for="year-select" style="margin-left: 50px;">Select Year:</label>
+    <select id="year-select">
+
+    </select>
     <section>
         <div class="container-graph" style="background-color: white;">
             <div class="graph-content">
                 <h3>Profit per Year</h3>
-                <label for="year-select">Select Year: </label>
-                <select id="year-select"></select>
-                <div class="profit-per-year">
+                <div class="chart-section profit-per-year">
                 </div>
                 <div>
                     <h3>Customer by Country</h3>
-                    <div class="custBycountry">
-                        <canvas id="countryChart"></canvas>
+                    <div class="chart-section customer-country">
                     </div>
                 </div>
             </div>
             <div class="sidebar">
                 <div class="gender">
                     <h2>Gender Distribution</h2>
-                    <div class="gender-distribution">
-                        <canvas id="genderChart"></canvas>
+                    <div class="chart-section gender-distribution">
+
                     </div>
                 </div>
                 <br>
                 <div>
                     <h2>Customer by Age</h2>
-                    <div class="age-distribution">
-                        <canvas id="ageChart"></canvas>
+                    <div class="chart-section customer-age">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <h1 style="margin-left: 50px;">About</h1>
-    <section class="content" id="content">
-        
-        <div class="about-container">
-            <div class="about-image">
-                <img src="https://awsimages.detik.net.id/community/media/visual/2020/08/04/polygon-targetkan-produksi-700-ribu-sepeda-sepanjang-2020_169.jpeg?w=1200" alt="">
-            </div>
-            <div class="about-text">
-                <h1>Welcome to our Company</h1>
-                <h3>Lorem ipsum dolor sit amet</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aliquid minus tenetur ipsam alias voluptatibus, unde optio! Fuga, pariatur laboriosam nostrum, obcaecati illum vel accusamus veritatis reiciendis asperiores, animi voluptatum!</p>
+    <section>
+    <div class="container-table" style="background-color: white;">
+        <div class="table-content">
+            <h3>Data Table</h3>
+            <div class="data-table-container">
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <h1 style="margin-left: 50px;">Team 8 - Jakarta</h1>
+    <h1  id="team" style="margin-left: 50px; margin-bottom: 50px;">Team 8 - Jakarta</h1>
     <div class="team">
         <div class="photos">
             <div class="photo">
@@ -152,7 +148,7 @@
             </div>
             <div class="photo">
                 <img src="assets/dhea.jpg" alt="Foto Anggota 10">
-                <p>Dhea</p>
+                <p>Dhea Veriska</p>
             </div>
             <div class="photo">
                 <img src="assets/nurul.jpg" alt="Foto Anggota 11">
@@ -160,10 +156,30 @@
             </div>
         </div>
     </div>
+    <h1 id="about" style="margin-left: 50px;">About</h1>
+    <section class="content" id="content">
+
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://awsimages.detik.net.id/community/media/visual/2020/08/04/polygon-targetkan-produksi-700-ribu-sepeda-sepanjang-2020_169.jpeg?w=1200"
+                    alt="">
+            </div>
+            <div class="about-text">
+                <h3>Welcome to PrecisEight,</h3>
+                <p>Your trusted partner in high-quality bicycles and cycling gear. Since our
+                    founding in 2010, we have been dedicated to enhancing the cycling experience for enthusiasts of all
+                    levels. Our passion for cycling drives us to innovate and deliver products that combine performance,
+                    durability, and style. PrecisEight was born out of a love for cycling and a desire to create the
+                    best bikes on the market. We started as a small workshop, and through hard work and a commitment to
+                    quality, we've grown into a leading bicycle company. Our journey is fueled by a passion for
+                    innovation and a commitment to our customers.</p>
+            </div>
+        </div>
+    </section>
     </div>
 
     <footer>
-        <div class="container">
+        <div class="footer-container">
             <p>Hak Cipta PrecisEight Comapany © 2024. Semua Hak Dilindungi Undang-Undang.</p>
         </div>
     </footer>
