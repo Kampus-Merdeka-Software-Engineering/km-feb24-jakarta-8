@@ -16,6 +16,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 70px;
 }
 
 .container {
@@ -393,19 +394,23 @@ h1 {
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 30px;
     align-items: center;
-    padding: 50px;
+    padding: 20px;
+    margin-bottom: 70px;
 }
 
 .about-image img {
-    width: 100%;
+    width: 600px;
     height: auto;
     border-radius: 5px;
 }
-
 .about-text h1 {
-    margin-top: 0;
+    text-align: center;
+    color: gray;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-size: 30px;
 }
 
 .about-text h3 {
