@@ -377,6 +377,14 @@ const renderDataTable = (data) => {
     });
   });
 
+  // Add a footer row for total of all years
+  const totalRowData = calculateTotalRow(data);
+  const footerRow = table.insertRow();
+  Object.values(totalRowData).forEach(value => {
+    const cell = footerRow.insertCell();
+    cell.textContent = value;
+  });
+
   // Append table to main content
   mainContent.appendChild(table);
 };
@@ -399,10 +407,21 @@ const calculateDataRow = (data, year) => {
   };
 };
 
+const calculateTotalRow = (data) => {
+  const totalTransaction = data.length;
+  const soldItems = data.reduce((sum, item) => sum + item.Order_Quantity, 0);
+  const totalCosts = data.reduce((sum, item) => sum + item.Cost, 0);
+  const totalRevenue = data.reduce((sum, item) => sum + item.Revenue, 0);
+  const totalProfit = data.reduce((sum, item) => sum + item.Profit, 0);
 
+  return {
+    'Years': 'TOTAL ALL YEARS',
+    'Total Transaction': totalTransaction,
+    'Sold Items': soldItems,
+    'Costs': totalCosts.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+    'Revenue': totalRevenue.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+    'Profit': totalProfit.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+  };
+};
 
-
-
-// Call renderDataTable function to display the data table
-fetchDataAndInitialize();
 

@@ -1,9 +1,10 @@
+/* Global Styles */
 * {
     font-family: "DM Serif Display", serif;
     scroll-behavior: smooth;
 }
 
-h1 {
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
@@ -12,22 +13,7 @@ body {
     margin: 0;
 }
 
-.team {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 70px;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
+/* Header */
 header {
     background: #333;
     color: #fff;
@@ -49,6 +35,7 @@ header {
     display: none;
     font-size: 30px;
     cursor: pointer;
+    margin-left: auto;
 }
 
 nav ul {
@@ -68,6 +55,7 @@ nav ul li a {
     color: #fff;
 }
 
+/* Cover Section */
 .cover {
     background-image: url('./assets/heksa-cover.jpg');
     background-size: cover;
@@ -102,6 +90,7 @@ nav ul li a {
     margin-top: 20px;
 }
 
+/* Footer */
 footer {
     background: #333;
     color: #fff;
@@ -109,6 +98,7 @@ footer {
     text-align: center;
 }
 
+/* Content */
 .content {
     margin: 20px auto 0;
     width: 95%;
@@ -119,13 +109,27 @@ footer {
     color: grey;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
 .container-card {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 30px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 30px 60px;
 }
 
 .card {
@@ -185,38 +189,37 @@ footer {
     align-items: center;
 }
 
-.logo {
-    font-family: "Kanit", sans-serif;
-    font-weight: 800;
-    font-size: 30px;
-}
-
-.burger-menu {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-
+/* Data Table */
 .data-table-container {
     overflow-x: auto;
+    margin: 20px 0;
 }
 
 .data-table {
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #ddd;
+    font-family: "DM Serif Display", serif;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .data-table th, .data-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px;
     text-align: left;
+    transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .data-table th {
-    background-color: #f2f2f2;
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .data-table tbody tr:nth-child(even) {
@@ -227,8 +230,106 @@ footer {
     background-color: #ddd;
 }
 
+.data-table td {
+    font-size: 14px;
+    color: #333;
+}
+
+.data-table th, .data-table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th:first-child, .data-table td:first-child {
+    border-left: none;
+}
+
+.data-table td:first-child {
+    font-weight: bold;
+    background-color: #444;
+    color: #fff;
+}
+
+/* Photos Section */
+.photos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+    justify-content: center;
+}
+
+.photo {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0c0c0c;
+}
+
+.photo p {
+    margin-top: 1px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* About Section */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 70px;
+}
+
+.about-image img {
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.about-text h1 {
+    text-align: center;
+    color: gray;
+    margin-bottom: 15px;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.about-text h3 {
+    margin: 20px 0 10px;
+}
+
+.about-text p {
+    margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .photos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 
 @media (max-width: 768px) {
+    .data-table-container {
+        margin: 10px 0;
+    }
+
+    .data-table th, .data-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
     .container-logo {
         display: flex;
         justify-content: space-between;
@@ -247,9 +348,6 @@ footer {
 
     .burger-menu {
         display: block;
-        font-size: 30px;
-        cursor: pointer;
-        float: right;
     }
 
     nav ul {
@@ -275,18 +373,17 @@ footer {
         padding: 20px;
     }
 
-    .card {
+    .card, .graph-content, .sidebar {
         width: 100%;
-        margin-bottom: 20px;
     }
 
-    .container-graph {
+    .container-graph, .container-table {
         flex-direction: column;
         gap: 20px;
     }
 
-    .graph-content, .sidebar {
-        width: 100%;
+    .about-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -337,92 +434,8 @@ footer {
     footer {
         padding: 15px 0;
     }
-}
 
-h1 {
-    margin-bottom: 15px;
-    font-style: italic;
-    font-size: 30px;
-}
-
-.photos {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 40px;
-    justify-content: center;
-}
-
-.photo {
-    text-align: center;
-    font-style: italic;
-    font-weight: bold;
-}
-
-.photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #0c0c0c;
-}
-
-.photo p {
-    margin-top: 1px;
-    font-size: 14px;
-    color: #333;
-}
-
-
-@media (max-width: 1200px) {
-    .photos {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .photos {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
     .photos {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 70px;
-}
-
-.about-image img {
-    width: 600px;
-    height: auto;
-    border-radius: 5px;
-}
-.about-text h1 {
-    text-align: center;
-    color: gray;
-    margin-bottom: 15px;
-    font-style: italic;
-    font-size: 30px;
-}
-
-.about-text h3 {
-    margin: 20px 0 10px;
-}
-
-.about-text p {
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    .about-container {
-        grid-template-columns: 1fr;
     }
 }
