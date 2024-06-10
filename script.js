@@ -377,7 +377,6 @@ const renderDataTable = (data) => {
     });
   });
 
-  // Add a footer row for total of all years
   const totalRowData = calculateTotalRow(data);
   const footerRow = table.insertRow();
   Object.values(totalRowData).forEach(value => {
@@ -423,5 +422,20 @@ const calculateTotalRow = (data) => {
     'Profit': totalProfit.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
   };
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  const burgerMenu = document.getElementById('burger-menu');
+  const navLinks = document.getElementById('nav-links');
+
+  burgerMenu.addEventListener('click', function() {
+      navLinks.classList.toggle('show');
+  });
+
+  navLinks.querySelectorAll('li a').forEach(link => {
+      link.addEventListener('click', function() {
+          navLinks.classList.remove('show');
+      });
+  });
+});
 
 
